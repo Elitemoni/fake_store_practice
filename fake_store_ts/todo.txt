@@ -1,0 +1,8 @@
+-CartItems should have cart Ids separate from 
+id of the item. Current problem is that duplicates all delete
+(unless I do by quanity which makes more sense)
+
+-with quantity be able to have flexibility to select exactly how much to add/delete
+-make the searchbar grey out the other items instead of hiding them
+-fix the image delete bug (if the image was deleted, and it's browsed again,
+it will not put it up)

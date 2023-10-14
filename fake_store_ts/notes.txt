@@ -1,0 +1,5 @@
+The reason to make an items.json is so that
+there is a global item list accesible to buyers and sellers
+
+If I'm a merchant, I put something on sale, which will update the database
+If I'm a customer, I buy something on sale, which will update the database

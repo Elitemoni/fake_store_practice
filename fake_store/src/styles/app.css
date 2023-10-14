@@ -1,0 +1,419 @@
+:root {
+  --color-border: black;
+  --color-light-blue: rgb(202, 225, 245);
+  --color-dark-orange: rgb(255, 181, 97);
+  --color-light-orange: rgb(255, 228, 196);
+  --color-dark-green: rgb(2, 213, 132);
+  --color-light-green: rgb(0, 255, 157);
+  --color-light-red: rgb(255, 84, 84);
+  --color-dark-red: rgb(204, 0, 0);
+  --color-dark-grey: rgb(135, 135, 135);
+  --color-light-grey: rgb(219, 219, 219);
+  --color-white: #FFF;
+}
+
+.App-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header-root {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60px;
+  border: var(--color-border) solid 2px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Store-header, .Cart-header, .Merchandize-header {
+  text-align: center;
+  font-size: 60px;
+}
+
+.SearchBar-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchBar-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchBar-bar {
+  flex: 1;
+  font-size: 40px;
+
+  text-align: center;
+  border: var(--color-border) solid 2px;
+}
+
+.Content-root {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  background-color: var(--color-light-blue);
+  border: var(--color-border) solid 2px;
+
+}
+
+.ItemBox-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: var(--color-white);
+  border: var(--color-border) solid 2px;
+  /* border: red solid 2px; */
+}
+
+.ItemBox-name {
+  flex: 6;
+  text-align: center;
+  border-bottom: 2px;
+  border: var(--color-border) solid;
+}
+
+.ItemBox-img {
+  /* flex: 1; */
+  height: 160px;
+  border: var(--color-border) solid 2px;
+}
+
+.ItemBox-price {
+  flex: 1;
+  color: var(--color-white);
+  background-color: black;
+  text-align: center;
+}
+
+.ItemBox-description {
+  flex: 1;
+  text-align: center;
+  border: black solid 2px;
+}
+
+.ItemBox-quantity {
+  flex: 1;
+  background-color: var(--color-light-grey);
+  text-align: center;
+  border: black solid 2px;
+}
+
+.ItemBox-flex-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.ItemGrid-root {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: start;
+  margin: 20px 0 0 20px;
+}
+
+.Nav-root {
+  position: static;
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items:stretch;
+}
+
+.Nav-cart, .Nav-store, .Nav-merchandize {
+  flex: 1;
+  background-color: var(--color-light-orange);
+  border: var(--color-border) solid 2px;
+
+
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.Nav-cart:hover, .Nav-store:hover, .Nav-merchandize:hover {
+  background-color: var(--color-dark-orange);
+}
+
+.Nav-text-cart, .Nav-text-store, .Nav-text-merchandize {
+  position: relative;
+  top: 50%;
+  translate: 0 -50%;
+  
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+
+/* how can i get the width value equal to the px value of height
+  converted from the percentage? */
+.Logo-root {
+  width: 76px;
+  height: 100%;
+  padding: 0 10px 0 10px;
+  border: var(--color-border) solid 2px;
+}
+
+.Logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.Cart-box {
+  position: absolute;
+  top:50%;
+  left:50%;
+  translate: -50% -50%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.Cart-question {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.Cart-ask {
+  height: 54px;
+  color: black;
+  background-color: var(--color-white);
+  border: var(--color-border) solid 4px;
+}
+
+.Cart-buy-button {
+  height: 60px;
+  font-size: 20px;
+  color: black;
+  background-color: var(--color-light-green);
+  border: var(--color-border) solid 4px;
+  border-top: 2px;
+}
+
+.Cart-buy-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-green);
+}
+
+.Cart-not-buy {
+  height: 60px;
+  color: black;
+  text-decoration: none;
+  background-color: var(--color-light-grey);
+  border: var(--color-border) solid 4px;
+  border-top: 2px;
+}
+
+.Cart-not-buy-text {
+  position: relative;
+  color: black;
+
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.Cart-buy:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-green);
+}
+
+.Cart-not-buy:hover {
+  background-color: var(--color-dark-grey);
+}
+
+.Merchandize-box {
+  position: absolute;
+  top:50%;
+  left:50%;
+  translate: -50% -50%;
+  border: var(--color-border) solid 2px;
+
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.MerchForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.MerchBar {
+  flex: 1;
+  text-align: center;
+  height: 40px;
+  border: var(--color-border) solid 2px;
+}
+
+.Footer-root {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 100px;
+}
+
+.Footer-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.StoreItem-root {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  /* border: var(--color-border) solid 1px; */
+}
+
+.AddToCart-root {
+  display: flex;
+  flex-direction: row;
+}
+
+.AddToCart-button {
+  flex: 1;
+  height: 40px;
+  background-color: var(--color-light-green);
+  border: var(--color-border) solid 2px;
+  transition: background-color 0.15s;
+}
+
+.AddToCart-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-green);
+}
+
+.CartItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.Delete-root {
+  display: flex;
+  flex-direction: row;
+}
+
+.Delete-button {
+  flex: 1;
+  height: 40px;
+  background-color: var(--color-light-red);
+  border: var(--color-border) solid 2px;
+}
+
+.Delete-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-red);
+}
+
+.AddToStore-root {
+  display: flex;
+  flex-direction: row;
+}
+
+.AddToStore-button {
+  flex: 1;
+  height: 40px;
+  background-color: var(--color-light-green);
+  border: var(--color-border) solid 2px;
+}
+
+.AddToStore-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-green);
+}
+
+.ImagePicker-root {
+  display: flex;
+  flex-direction: row;
+  border: var(--color-border) solid 2px;
+}
+
+.ImagePicker-textover-container {
+  flex: 1;
+  height: 160px;
+  background-color: var(--color-white);
+}
+
+.ImagePicker-textover {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.ImagePicker-image {
+  flex: 1;
+  height: 160px;
+}
+
+.ImagePicker-nonimage-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: var(--color-border) solid 2px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.ImagePicker-browse-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border: var(--color-border) solid 2px;
+}
+
+.ImagePicker-browse-button {
+  flex: 1;
+  background-color: var(--color-light-grey);
+  border: none;
+}
+
+.ImagePicker-browse-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-grey);
+}
+
+.ImagePicker-delete-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border: var(--color-border) solid 2px;
+}
+
+.ImagePicker-delete-button {
+  flex: 1;
+  background-color: var(--color-light-red);
+  border: none;
+}
+
+.ImagePicker-delete-button:hover {
+  cursor: pointer;
+  background-color: var(--color-dark-red);
+}
+
+.ImagePicker-input {
+  display: none;
+}

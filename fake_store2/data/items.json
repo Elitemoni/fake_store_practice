@@ -1,0 +1,17 @@
+[
+  {
+    "id":1,
+    "name":"Obsidian Rock",
+    "img":"/static/media/obsidian_rock.96334728ac544437c509.jpg"
+  },
+  {
+    "id":2,
+    "name":"Red Rock",
+    "img":"/static/media/red_rock.9d7b0db428b74e7ee283.avif"
+  },
+  {
+    "id":3,
+    "name":"Amethyst",
+    "img":"/static/media/amethyst.9c8aee485c498a395a91.jpg"
+  }
+]
